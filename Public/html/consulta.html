@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/styles_pacientes.css">
+    <title>Atendimeto de Pacientes</title>
+</head>
+<body>
+    <header class="topo">
+        <a href="../home.html"><img src="../img/shared_image.2.png" alt="logo" class="logo"></a>
+        <h1>Painel de Atendimento</h1>
+    </header>
+    <div class="container">
+        <div class="Section-Atendimento">
+            <label for="paciente">Paciente:</label>
+            <input type="text" id="paciente" placeholder="Insira o nome do Paciente sem abreviaturas">
+            <label for="cpf">CPF e RG do Paciente:</label>
+            <input type="text" id="cpf" maxlength="14" minlength="1" placeholder="000.000.000-00">
+            <span class="icon-alert" >⚠<span class="tooltip">Necessário preenchimento dos Campos CPF e RG</span></span>
+            <input type="text" id="RG" placeholder="00.000.000-0">
+            <label for="datahoraIni">Data e hora de Inicio:</label>
+            <input type="datetime-local" id="datahoraIni">
+            <label for="datahoraFin">Data e hora de Finalização:</label>
+            <input type="datetime-local" id="datahoraFin">
+        </div>
+        <div class="Section-Resumo">
+            <label for="resumo">Relatorio da Consulta</label>
+            <textarea id="resumo" placeholder="Favor inseir aqui o relatório da consulta junto com questionamentos e duvidas"></textarea>
+            <button type="button" id="send-save">Salvar</button>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="../js/script_consulta.js"></script>
+</body>
+</html>
